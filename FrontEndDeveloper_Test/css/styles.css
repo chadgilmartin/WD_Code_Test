@@ -5,7 +5,13 @@
 }
 .col-left {
 	float: left;
+	clear: left;
 }
 .col-right {
 	float: right;
+	clear: right;
+}
+#submit {
+	display:;
+	position: relative;
 }
