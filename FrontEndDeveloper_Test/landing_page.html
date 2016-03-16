@@ -5,6 +5,8 @@
     <title>Landing Page - Front-End Developer Test</title>
     <script src="//code.jquery.com/jquery-1.12.0.min.js"></script>
 	<script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="css/styles.css">
+	<script type="text/javascript" src="js/scripts.js"></script>
 </head>
 <body>
 
@@ -17,35 +19,35 @@
 					<h2>Shipping Information</h2> 
 				</div>                                               
 				<ul class="checkout" id="shipping-address"> 
-					<li id="shipping-email">
+					<li id="shipping-email" class="col-left">
 						<label>Email Address</label> 
-						<input type="text"  id="email-address"> 
+						<input type="text"  id="email-address" size="35"> 
 					</li>  
-					<li id="shipping-email">
+					<li id="confirm-shipping-email" class="col-left">
 						<label>Confrim Email Address</label> 
-						<input type="text"  id="email-address-confirm"> 
+						<input type="text"  id="email-address-confirm" size="35"> 
 					</li>  
-					<li id="shipping-fname"> 
+					<li id="shipping-fname" class="col-left"> 
 						<label>  First Name </label> 
-						<input id="first-name" maxlength="15"  value=""  type="text" >
+						<input id="first-name" maxlength="15" size="20" value=""  type="text" >
 					</li> 
-					<li id="shipping-lname"> 
+					<li id="shipping-lname" class="col-left"> 
 						<label>  Last Name </label> 
-						<input id="last-name" maxlength="19"  value=""  type="text" >
+						<input id="last-name" maxlength="19" size="25" value=""  type="text" >
 					</li>   
-					<li id="shipping-addr1"> 
+					<li id="shipping-addr1" class="col-left"> 
 						<label>  Address 1 </label> 
-						<input id="address-1" maxlength="35"  value="" type="text" >
+						<input id="address-1" maxlength="35" size="45" value="" type="text" >
 					</li> 
-					<li id="shipping-addr2"> 
+					<li id="shipping-addr2" class="col-left"> 
 						<label> Address 2 </label> 
-						<input id="address-2" maxlength="35"  value="" type="text" >
+						<input id="address-2" maxlength="35" size="40" value="" type="text" >
 					</li>   
-					<li id="shipping-city"> 
+					<li id="shipping-city" class="col-right"> 
 						<label> City </label> 
-						<input id="city"  value="" type="text">
+						<input id="city"  value="" size="25" type="text">
 					</li> 
-					<li id="shipping-state"> 
+					<li id="shipping-state" class="col-right"> 
 						<label> State </label> 
 						<select name="state">
 						<option value="AL">AL</option>
@@ -101,23 +103,23 @@
 						<option value="WY">WY</option>
 						</select> 
 					</li>   
-					<li id="shipping-zip"> 
+					<li id="shipping-zip" class="col-right"> 
 						<label>Zip</label> 
-							<input id="zip" maxlength="5"  value="" type="text">
+							<input id="zip" maxlength="5" size="5" value="" type="text">
 					</li> 
-					<li id="shipping-phone"> 
+					<li id="shipping-phone" class="col-right"> 
 						<label>Phone </label> 
-						<input id="phone" maxlength="10"  value="" type="text" >
+						<input id="phone" maxlength="10" size="11" value="" type="text" >
 					</li> 			
-					<li id="shipping-toggle"> <p>Is this address? </p> 
+					<li id="shipping-toggle" class="col-right"> <p>Is this address? </p> 
 						<input id="residential"  value="Residential" type="radio" checked="">
 						<span> Residential </span> 
 						<input id="commercial"  value="Commercial" type="radio">
 						<span> Commercial </span> 
 					</li>  
-					<li id="shipping-company"> 
+					<li id="shipping-company" class="col-right"> 
 						<label> Company Name </label> 
-						<input id="company" value="" type="text" >
+						<input id="company" value="" size="25" type="text" >
 					</li>
 				</ul>
 			</div>
