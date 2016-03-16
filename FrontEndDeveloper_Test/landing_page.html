@@ -3,10 +3,10 @@
 <head>
     <meta charset="utf-8">
     <title>Landing Page - Front-End Developer Test</title>
-    <script src="//code.jquery.com/jquery-1.12.0.min.js"></script>
-	<script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
-	<link rel="stylesheet" type="text/css" href="css/styles.css">
+    <link rel="stylesheet" type="text/css" href="css/styles.css">
+    <script src="bower_components/jquery/dist/jquery.min.js"></script>
 	<script type="text/javascript" src="js/scripts.js"></script>
+	<script type="text/javascript" src="js/modernizr-custom.js"></script>
 </head>
 <body>
 
@@ -108,16 +108,16 @@
 						<input id="address-1" maxlength="35" size="45" value="" type="text">
 					</li>
 					<li id="shipping-toggle" class="col-right"><p>Is this address?</p> 
-						<input id="residential"  value="Residential" type="radio" checked="">
+						<input id="residential"  value="Residential" type="radio" name="company-type" checked="checked">
 						<span> Residential </span> 
-						<input id="commercial"  value="Commercial" type="radio">
+						<input id="commercial"  value="Commercial" type="radio" name="company-type">
 						<span> Commercial </span> 
 					</li> 
 					<li id="shipping-addr2" class="col-left"> 
 						<label> Address 2 </label> 
 						<input id="address-2" maxlength="35" size="40" value="" type="text">
 					</li>   
-					<li id="shipping-company" class="col-left"> 
+					<li id="shipping-company" class="col-right"> 
 						<label> Company Name </label> 
 						<input id="company" value="" size="25" type="text">
 					</li>
