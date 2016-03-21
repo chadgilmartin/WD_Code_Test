@@ -7,23 +7,7 @@ $(document).ready(function(){
 		$("#shipping-company").hide();
 	});
 	$("#phone-error").hide();
-	$(".phone-test").keyup(function () {
-		if (this.value != this.value.replace(/[^0-9\.]/g, '')){
-			$("#phone-error").show();
-		}
-		else {
-			$("#phone-error").hide();
-		}
-	});
 	$("#zip-error").hide();
-	$(".zip-test").keyup(function () {
-		if (this.value != this.value.replace(/[^0-9\.]/g, '')){
-			$("#zip-error").show();
-		}
-		else {
-			$("#zip-error").hide();
-		}
-	});
 	function isEmail(email) {
 	var regex = /^([a-zA-Z0-9_\.\-\+])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
 		if(!regex.test(email)) {
@@ -35,13 +19,46 @@ $(document).ready(function(){
 	}
 	$("#submit").click(function (event) {
 		var emailAddress = $("#email-address").val();
-		if( isEmail(emailAddress) ) {
+		var emailConfirm = $("#email-address-confirm").val();
+		if( isEmail(emailAddress) && emailAddress === emailConfirm ) {
 			console.log(emailAddress);
+			console.log(emailConfirm);
 		}
-		else {
+		else if (!isEmail(emailAddress)) {
 			alert("Please enter a valid email address.");
-			return false
+			return false;
 		}
+		else if (emailAddress !== emailConfirm) {
+			alert("email addresses must match");
+			return false;
+		}
+		$(".phone-test").keyup(function () {
+			if (this.value != this.value.replace(/[^0-9\.]/g, '')){
+				$("#phone-error").show();
+				return false;
+			}
+			else if (this.value.length != 10.1) {
+				$("#phone-error").show();
+				return false;
+			}
+			else {
+				$("#phone-error").hide();
+			}
+		});
+		$(".zip-test").keyup(function () {
+			if (this.value != this.value.replace(/[^0-9\.]/g, '')){
+				$("#zip-error").show();
+				return false;
+			}
+			else if (this.value.length !=5) {
+				$("#zip-error").show();
+				return false;
+			}
+			else {
+				$("#zip-error").hide();
+
+			}
+		});
 	});
 });
 
