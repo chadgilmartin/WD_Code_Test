@@ -1,14 +1,27 @@
 $(document).ready(function(){
-    $("#shipping-company").hide();
-    $("#commercial").click(function(){
-        $("#shipping-company").show();
-    });
-    $("#residential").click(function(){
-        $("#shipping-company").hide();
-    });
-    $('.numbersOnly').keyup(function () {
-    	if (this.value != this.value.replace(/[^0-9\.]/g, '')) {
-    		this.value = this.value.replace(/[^0-9\.]/g, '');
+	$("#shipping-company").hide();
+	$("#commercial").click(function(){
+		$("#shipping-company").show();
+	});
+	$("#residential").click(function(){
+		$("#shipping-company").hide();
+	});
+	$("#phone-error").hide();
+	$(".phone-test").keyup(function () {
+		if (this.value != this.value.replace(/[^0-9\.]/g, '')){
+			$("#phone-error").show();
+		}
+		else {
+			$("#phone-error").hide();
+		}
+	});
+	$("#zip-error").hide();
+	$(".zip-test").keyup(function () {
+		if (this.value != this.value.replace(/[^0-9\.]/g, '')){
+			$("#zip-error").show();
+		}
+		else {
+			$("#zip-error").hide();
 		}
 	});
 	function isEmail(email) {
