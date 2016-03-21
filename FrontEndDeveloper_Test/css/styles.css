@@ -21,3 +21,9 @@
 .error {
 	color: red;
 }
+.required {
+	border: 1px solid red;
+}
+#required-fields {
+	color:red;
+}
